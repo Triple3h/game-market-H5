@@ -2749,7 +2749,7 @@ header.header.header-static {
   z-index: 9; }
   @media only screen and (min-width: 1200px) and (max-width: 1499px) {
     .newslatter-section-tow {
-      bottom: -80px; } }
+      bottom: -50px; } }
   @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .newslatter-section-tow {
       bottom: -65px; } }
@@ -3581,7 +3581,12 @@ header.header.header-static {
       .single-games-review .review-content h4 {
         font-size: 16px; } }
     .single-games-review .review-content h4 a {
-      display: block; }
+      display: block;
+      width: 200px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: center;}
   .single-games-review .review-content span {
     font-size: 16px;
     line-height: 28px;
@@ -4688,7 +4693,7 @@ header.header.header-static {
   padding: 45px; }
   @media only screen and (max-width: 575px) {
     .checkout-cart-total {
-      padding: 30px; } }
+      padding: 10px; } }
   .checkout-cart-total h4 {
     -ms-flex-preferred-size: 18px;
     flex-basis: 18px;
@@ -4712,16 +4717,16 @@ header.header.header-static {
       line-height: 23px;
       font-weight: 600;
       display: block;
-      margin-bottom: 16px; }
+      }
       .checkout-cart-total ul li span {
         color: #ffffff;
-        float: right; }
+       }
   .checkout-cart-total p {
     font-size: 14px;
     line-height: 30px;
     font-weight: 600;
     color: #ffffff;
-    padding: 10px 0;
+    padding: 30px 0;
     border-bottom: 1px solid #ffffff;
     margin: 0; }
     .checkout-cart-total p span {
@@ -5339,3 +5344,177 @@ header.header.header-static {
       font-size: 13px; } }
   .copyright p a:hover {
     color: #f64140; }
+
+
+.cartBox .order_content{
+  border: 1px solid #ccc;
+}
+.cartBox .order_content a{
+  display: block;
+}
+.order_lists{
+  width: 100%;
+  height: 150px;
+  margin-top: 15px;
+}
+.order_lists:last-child{
+  border-bottom: none;
+}
+.order_lists li{
+  float: left;
+  height: 100%;
+}
+
+.order_lists .list_chk{
+  position: relative;
+  width: 50px;
+}
+.order_lists .list_chk input[type="checkbox"]{
+  position: absolute;
+  z-index: 0;
+  left: -20px;
+  top: -20px;
+}
+.order_lists .list_chk label{
+  margin: 20px 0 0 0;
+}
+
+.order_lists .list_con{
+  width: 360px;
+
+}
+
+.order_lists .list_con .list_img img{
+  width: 100%;
+  vertical-align: top;
+}
+.order_lists .list_con .list_text{
+  font-size: 20px;
+  line-height: 23px;
+  text-decoration: underline;
+  text-transform: capitalize;
+  font-weight: 700;
+  float: left;
+  margin-bottom: 30px;
+}
+.order_lists .list_con .list_text a{
+  color: #ffffff;
+  line-height: 70px;
+}
+.order_lists .list_con .list_text a:hover{
+  color: #ff873e;
+
+}
+
+.order_lists .list_info{
+  width: 252px;
+  box-sizing: border-box;
+  padding: 20px 0;
+}
+.order_lists .list_info p{
+  color: #9c9c9c;
+  line-height: 18px;
+  margin-left: 15px;
+}
+.order_lists .list_price{
+  width: 60px;
+  margin-left: 80px;
+  line-height: 70px;
+}
+.order_lists .list_price .price{
+  font-size: 20px;
+  line-height: 23px;
+
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.order_lists .list_amount{
+  width: 120px;
+  margin-left: 80px;
+  line-height: 70px;
+}
+.order_lists .list_amount .amount_box{
+  width: 77px;
+  height: 30px;
+  position: relative;
+ margin-top: 20px;
+}
+.order_lists .list_amount .amount_box input{
+  width: 39px;
+  height: 24px;
+  line-height: 15px;
+  border: 1px solid #aaa;
+  color: #343434;
+  text-align: center;
+  padding: 4px 0;
+  background-color: #fff;
+  z-index: 2;
+  position: absolute;
+  left: 19px;
+  float: left;
+}
+.order_lists .list_amount .amount_box a{
+  float: left;
+  height: 24px;
+  width: 17px;
+  border: 1px solid #e5e5e5;
+  background: #f0f0f0;
+  text-align: center;
+  line-height: 23px;
+  color: #444;
+  position: absolute;
+  top:0;
+}
+.order_lists .list_amount .amount_box a:hover{
+  border-color: #ff2320;
+  text-decoration: none;
+  color: #ff873e;
+  z-index: 3;
+}
+
+.order_lists .list_amount .amount_box .reduce{
+  left: 0;
+}
+
+.order_lists .list_amount .amount_box .reSty{
+  color: #cbcbcb;
+}
+.order_lists .list_amount .amount_box .reSty:hover{
+  border-right: none;
+  border-color: #e5e5e5;
+  text-decoration: none;
+  color: #cbcbcb;
+}
+
+.order_lists .list_amount .amount_box .plus{
+  border-left-color: transparent;
+  right: 0;
+}
+
+
+.order_lists .list_sum{
+  width: 60px;
+  margin-left: 180px;
+  text-align: right;
+  line-height: 70px;
+}
+.order_lists .list_sum .sum_price{
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: red;
+  float: right;
+  line-height: 70px;
+}
+.order_lists .list_op{
+  width: 80px;
+  text-align: right;
+
+}
+.order_lists .list_op .del{
+
+  line-height: 70px;
+}

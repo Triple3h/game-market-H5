@@ -6,7 +6,7 @@ $(function () {
                 let $bigbanner = $(".hero-slider");
                  let s = bbbner(datas);
                 $bigbanner.append(s);
-
+                $bigbanner.init();
            }
        }
    },'json');

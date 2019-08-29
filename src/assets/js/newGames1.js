@@ -32,10 +32,10 @@ $(function () {
         for (let i = 0; i < 6; i++) {
             let o = '<div class="single-game mb-50">' +
                 '<div class="game-img">' +
-                '<a href="games-details.html"><img src='+data.shopImages.shopImg+' alt='+data.gameName+'></a>' +
+                '<a href="games-details.html?gameId='+data.gameId+'"><img src='+data.shopImages.shopImg+' alt='+data.gameName+'></a>' +
                 '</div>' +
                 '<div class="game-content">' +
-                '<h4><a href="games-details.html">'+data.gameName+'</a></h4>' +
+                '<h4><a href="games-details.html?gameId='+data.gameId+'">'+data.gameName+'</a></h4>' +
                 '<span>'+data.platforms.platformName+'</span>' +
                 '</div>' +
                 '</div>' ;

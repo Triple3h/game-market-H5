@@ -22,7 +22,7 @@ $(function () {
            '<!--Single Game Start-->' +
            '<div class="single-game mb-50">' +
            '<div class="game-img">' +
-           '<a href="games-details.html"><img src='+datum[i].shopImages.shopImg+' alt='+datum[i].gameName+'></a>' +
+           '<a href="'+games-details.html+'"><img src='+datum[i].shopImages.shopImg+' alt='+datum[i].gameName+'></a>' +
            '</div>' +
            '<div class="game-content">' +
            '<h4><a href="games-details.html">'+datum[i].gameName+'</a></h4>' +

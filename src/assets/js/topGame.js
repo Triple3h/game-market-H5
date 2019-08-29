@@ -16,10 +16,10 @@ $(function () {
                 '<!--Single Games Review Start-->' +
                 '<div class="single-games-review mb-50">' +
                 '<div class="review-img">' +
-                '<a href="games-details.html"><img src='+datas.shopImages.shopImg+'  alt='+datas.gameName+'></a>' +
+                '<a href="games-details.html?gameId='+datas.gameId+'"><img src='+datas.shopImages.shopImg+'  alt='+datas.gameName+'></a>' +
                 '</div>' +
                 '<div class="review-content">' +
-                '<h4><a href="games-details.html">'+datas.gameName+'</a></h4>' +
+                '<h4><a href="games-details.html?gameId='+datas.gameId+'" >'+datas.gameName+'</a></h4>' +
                 '<span>rating: '+datas.score+'</span>' +
                 '<p>'+datas.gameInfos.gameIntro+'</p>' +
                 '</div>' +
