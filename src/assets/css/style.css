@@ -35,7 +35,7 @@
 /*  01. Theme default CSS
 /*----------------------------------------*/
 /*-- Google Font --*/
-@import url("../../../../../../../fonts.googleapis.com/css-family=Ubuntu-300,400,500.css"/*tpa=https://fonts.googleapis.com/css?family=Ubuntu:300,400,500*/);
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500");
 /*-- Common Style --*/
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
@@ -139,7 +139,7 @@ ul {
 img {
   max-width: 100%; }
 
-/*-- 
+/*--
     - Plugin CSS Customize
 -----------------------------------------*/
 .nice-select {
@@ -158,7 +158,7 @@ img {
   .note-editable {
     height: 200px !important; } }
 
-/*-- 
+/*--
     - Common Classes
 -----------------------------------------*/
 .fix {
@@ -260,7 +260,7 @@ img {
 .mbYTP_wrapper {
   z-index: -9 !important; }
 
-/*-- 
+/*--
     - Input Placeholder
 -----------------------------------------*/
 input:-moz-placeholder, textarea:-moz-placeholder {
@@ -297,7 +297,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .bg-black {
   background-color: #081b1f !important; }
 
-/*-- 
+/*--
     - Tab Content & Pane Fix
 ------------------------------------------*/
 .tab-content {
@@ -315,10 +315,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
       opacity: 1;
       overflow: visible; }
 
-/*-- 
+/*--
     - Main Wrapper
 ------------------------------------------*/
-/*-- 
+/*--
     - Section Title
 ------------------------------------------*/
 .section-title {
@@ -388,7 +388,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
       margin-left: auto;
       margin-right: 0; }
 
-/*-- 
+/*--
     - Button
 ------------------------------------------*/
 .df-btn {
@@ -426,7 +426,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
         left: -6px;
         top: -6px; } }
 
-/*-- 
+/*--
     - Page Banner Section
 ------------------------------------------*/
 .page-banner-section {
@@ -712,7 +712,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     .page-breadcrumb li a:hover {
       color: #f64140; }
 
-/*-- 
+/*--
     - Page Pagination
 ------------------------------------------*/
 .page-pagination {
@@ -961,7 +961,7 @@ header.header.header-static {
 .logo a {
   display: inline-block; }
   .logo a img {
-    max-width: 65%; }
+    max-width: 100%; }
 
 /*-- Header Search --*/
 .header-right-wrap ul {
@@ -1111,7 +1111,7 @@ header.header.header-static {
     .main-menu > ul > li:last-child {
       margin-right: 0; }
     .main-menu > ul > li > a {
-      font-size: 25px;
+      font-size: 20px;
       line-height: 70px;
       font-weight: 400;
       letter-spacing: 0.25px;
@@ -1185,7 +1185,7 @@ header.header.header-static {
       font-family: "Qanto";
       color: #151515;
       display: block;
-      font-size: 18px;
+      font-size: 14px;
       line-height: 30px;
       font-weight: 400;
       padding: 0 20px; }
@@ -1484,7 +1484,7 @@ header.header.header-static {
 
 /*-- Hero Item --*/
 .hero-item {
-  width: 1920px;
+  width: 100%;
   height: 1075px;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1501,7 +1501,7 @@ header.header.header-static {
   background-position: center center;
   z-index: 1; }
   .hero-item.hero-item-2 {
-    height: 1080px; }
+    height: 860px; }
     @media only screen and (min-width: 1200px) and (max-width: 1499px) {
       .hero-item.hero-item-2 {
         height: 600px; } }
@@ -2267,7 +2267,7 @@ header.header.header-static {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; } }
   .video-wrapper .single-video-title {
-    background-image: url("../images/video/video-bg.jpg"/*tpa=https://www.17sucai.com/preview/1528155/2018-12-26/Gilbard/assets/images/video/video-bg.jpg*/);
+    background-image: url(../images/video/video-bg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2743,7 +2743,7 @@ header.header.header-static {
 /*----------------------------------------*/
 .newslatter-section-tow {
   position: relative;
-  bottom: -95px;
+  bottom: -45px;
   z-index: 9; }
   @media only screen and (min-width: 1200px) and (max-width: 1499px) {
     .newslatter-section-tow {
@@ -2766,7 +2766,7 @@ header.header.header-static {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-image: url("../images/bg/news-bg.jpg"/*tpa=https://www.17sucai.com/preview/1528155/2018-12-26/Gilbard/assets/images/bg/news-bg.jpg*/);
+  background-image: url(../images/bg/news-bg.jpg);
   background-position: right;
   background-repeat: no-repeat;
   -webkit-box-align: center;
@@ -2776,7 +2776,7 @@ header.header.header-static {
   box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.05); }
   .news-latter-area.newslatter-black {
     background-color: #081b1f;
-    background-image: url("../images/bg/news-bg-2.png"/*tpa=https://www.17sucai.com/preview/1528155/2018-12-26/Gilbard/assets/images/bg/news-bg-2.png*/); }
+    background-image: url(../images/bg/news-bg-2.png); }
     @media only screen and (max-width: 767px) {
       .news-latter-area.newslatter-black {
         background-image: none; } }
@@ -2871,7 +2871,7 @@ header.header.header-static {
   text-align: center; }
   .testimonial .testimonial-inner::before {
     display: block;
-    content: url("../images/icons/quote-left.png"/*tpa=https://www.17sucai.com/preview/1528155/2018-12-26/Gilbard/assets/images/icons/quote-left.png*/);
+    content: url(../images/icons/quote-left.png);
     opacity: 1;
     line-height: 1;
     margin-bottom: 20px; }
@@ -2992,10 +2992,16 @@ header.header.header-static {
   .single-game .game-img a {
     display: block; }
     .single-game .game-img a img {
+      height: 310px;
       width: 100%;
       -webkit-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       -o-transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       transition: all 3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+
+    .game-image img {
+      height: 389px;
+      width: 750px;
+    }
 
 .single-game .game-content {
   padding: 20px 20px;
@@ -3020,6 +3026,7 @@ header.header.header-static {
       display: block; }
   .single-game .game-content span {
     font-size: 16px;
+    padding: 5px;
     line-height: 28px;
     color: #061da4;
     font-family: "Qanto";
@@ -3107,7 +3114,7 @@ header.header.header-static {
         max-width: 100%; } }
 
 .upcoming-game-area {
-  background-image: url("../images/banner/game-banner.jpg"/*tpa=https://www.17sucai.com/preview/1528155/2018-12-26/Gilbard/assets/images/banner/game-banner.jpg*/);
+  background-image: url(../images/banner/game-banner.jpg);
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -4713,7 +4720,7 @@ header.header.header-static {
       margin-bottom: 16px; }
       .checkout-cart-total ul li span {
         color: #ffffff;
-        float: right; }
+        float: none; }
   .checkout-cart-total p {
     font-size: 14px;
     line-height: 30px;
@@ -5337,3 +5344,181 @@ header.header.header-static {
       font-size: 13px; } }
   .copyright p a:hover {
     color: #f64140; }
+
+
+.cartBox .order_content{
+  border: 1px solid #ccc;
+}
+.cartBox .order_content a{
+  display: block;
+}
+.order_lists{
+  width: 100%;
+  height: 150px;
+  margin-top: 15px;
+}
+.order_lists:last-child{
+  border-bottom: none;
+}
+.order_lists li{
+  float: left;
+  height: 100%;
+}
+
+.order_lists .list_chk{
+  position: relative;
+  width: 50px;
+}
+.order_lists .list_chk input[type="checkbox"]{
+  position: absolute;
+  z-index: 0;
+  left: -20px;
+  top: -20px;
+}
+.order_lists .list_chk label{
+  margin: 20px 0 0 0;
+}
+
+.order_lists .list_con{
+  width: 360px;
+
+}
+.order_lists .list_con .list_img{
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+.order_lists .list_con .list_img img{
+  width: 100%;
+  vertical-align: top;
+}
+.order_lists .list_con .list_text{
+  font-size: 20px;
+  line-height: 23px;
+  text-decoration: underline;
+  text-transform: capitalize;
+  font-weight: 700;
+  float: left;
+  margin-bottom: 30px;
+}
+.order_lists .list_con .list_text a{
+  color: #ffffff;
+  line-height: 70px;
+}
+.order_lists .list_con .list_text a:hover{
+  color: #ff873e;
+
+}
+
+.order_lists .list_info{
+  width: 252px;
+  box-sizing: border-box;
+  padding: 20px 0;
+}
+.order_lists .list_info p{
+  color: #9c9c9c;
+  line-height: 18px;
+  margin-left: 15px;
+}
+.order_lists .list_price{
+  width: 60px;
+  margin-left: 80px;
+  line-height: 70px;
+}
+.order_lists .list_price .price{
+  font-size: 20px;
+  line-height: 23px;
+
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.order_lists .list_amount{
+  width: 120px;
+  margin-left: 80px;
+  line-height: 70px;
+}
+.order_lists .list_amount .amount_box{
+  width: 77px;
+  height: 30px;
+  position: relative;
+  margin-top: 20px;
+}
+.order_lists .list_amount .amount_box input{
+  width: 39px;
+  height: 24px;
+  line-height: 15px;
+  border: 1px solid #aaa;
+  color: #343434;
+  text-align: center;
+  padding: 4px 0;
+  background-color: #fff;
+  z-index: 2;
+  position: absolute;
+  left: 19px;
+  float: left;
+}
+.order_lists .list_amount .amount_box a{
+  float: left;
+  height: 24px;
+  width: 17px;
+  border: 1px solid #e5e5e5;
+  background: #f0f0f0;
+  text-align: center;
+  line-height: 23px;
+  color: #444;
+  position: absolute;
+  top:0;
+}
+.order_lists .list_amount .amount_box a:hover{
+  border-color: #ff2320;
+  text-decoration: none;
+  color: #ff873e;
+  z-index: 3;
+}
+
+.order_lists .list_amount .amount_box .reduce{
+  left: 0;
+}
+
+.order_lists .list_amount .amount_box .reSty{
+  color: #cbcbcb;
+}
+.order_lists .list_amount .amount_box .reSty:hover{
+  border-right: none;
+  border-color: #e5e5e5;
+  text-decoration: none;
+  color: #cbcbcb;
+}
+
+.order_lists .list_amount .amount_box .plus{
+  border-left-color: transparent;
+  right: 0;
+}
+
+
+.order_lists .list_sum{
+  width: 60px;
+  margin-left: 180px;
+  text-align: right;
+  line-height: 70px;
+}
+.order_lists .list_sum .sum_price{
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: red;
+  float: right;
+  line-height: 70px;
+}
+.order_lists .list_op{
+  width: 80px;
+  text-align: right;
+
+}
+.order_lists .list_op .del{
+
+  line-height: 70px;
+}
