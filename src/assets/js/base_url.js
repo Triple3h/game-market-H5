@@ -1,4 +1,4 @@
-const BASE_URL = "http://10.3.135.130:8080/api";
+const BASE_URL = "http://10.3.135.237:8080/api";
 
 const BIG_BANNER_URL = BASE_URL + "/bigBanner";
 

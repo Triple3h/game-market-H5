@@ -17,19 +17,42 @@
     <link rel="stylesheet" href="assets/css/icofont.min.css">
     <link rel="stylesheet" href="assets/css/plugins.css">
     <link rel="stylesheet" href="assets/css/helper.css">
-    <link rel="stylesheet" href="assets/css/style.css">   
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Modernizr JS -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <script src="assets/js/Utils.js"></script>
+    <script src="assets/js/BaseUrl.js"></script>
+    <script src="assets/js/vendor/jquery.js"></script>
+
+    <script>
+
+        $(function () {
+
+            $.get(LOGIN_URL, function (result) {
+                if (result.status === 200) {
+                    localStorage.setItem("userInfo", result.data);
+                }
+            },"json");
+
+            let $orderContent = $(".order_content");
+
+            let user = localStorage.getItem("userInfo");
+
+            getCarts(CART_URL + 2, $orderContent);
+        })
+
+    </script>
 </head>
 
 <body>
-    
+
 <div id="main-wrapper">
-   
+
     <!--Header section start-->
     <div id="header"></div>
     <!--Header section end-->
-    
+
     <!--Page Banner Area Start-->
     <div class="page-banner-area" style="background-image: url(assets/images/bg/page-bg.jpg)">
         <div class="container">
@@ -48,7 +71,7 @@
         </div>
     </div>
     <!--Page Banner Area End-->
-    
+
     <!--Checkout Area Start-->
     <div class="checkout-area section pt-95 pt-lg-75 pt-md-65 pt-sm-55 pt-xs-45">
         <div class="container">
@@ -56,145 +79,168 @@
                 <div class="col-12">
                     <!-- Checkout Form Start-->
                     <form action="#" class="checkout-form">
-                       <div class="row row-40">
-                           <div class="col-lg-12">
-                               <div class="row">
+                        <div class="row row-40">
+                            <div class="col-lg-12">
+                                <div class="row">
 
-                                   <!-- Cart Total -->
-                                   <div class="col-12 mb-60">
+                                    <!-- Cart Total -->
+                                    <div class="col-12 mb-60">
 
-                                       <h4 class="checkout-title">Cart Total</h4>
+                                        <h4 class="checkout-title">Cart Total</h4>
 
-                                       <div class="checkout-cart-total">
+                                        <div class="checkout-cart-total">
 
-                                           <h4>Product <span>Total</span></h4>
+                                            <h4>Product <span>Total</span></h4>
+                                            <div class="container order_content">
+                                                <ul class="order_lists col-lg-12">
+                                                    <li class="list_con">
+                                                        <div class="list_text "><a href="javascript:;">神秘海域</a></div>
+                                                    </li>
+                                                    <li class="list_price">
+                                                        <span class="price ">￥980</span>
+                                                    </li>
+                                                    <li class="list_amount">
+                                                        <div class="amount_box ">
+                                                            <a href="javascript:;" class="reduce reSty">-</a>
+                                                            <input type="text" value="1" class="sum">
+                                                            <a href="javascript:;" class="plus">+</a>
+                                                        </div>
+                                                    </li>
+                                                    <li class="list_op ">
+                                                        <span class="del"><a href="javascript:;" class="delBtn">移除商品</a></span>
+                                                    </li>
+                                                    <li class="list_sum ">
+                                                        <span class="sum_price">￥980</span>
+                                                    </li>
+                                                </ul>
 
-                                           <div class="container order_content">
-                                               <ul class="order_lists col-lg-12">
-                                                   <li class="list_con">
-                                                       <div class="list_text "><a href="javascript:;">神秘海域</a></div>
-                                                   </li>
-                                                   <li class="list_price">
-                                                       <span class="price ">￥980</span>
-                                                   </li>
-                                                   <li class="list_amount">
-                                                       <div class="amount_box ">
-                                                           <a href="javascript:;" class="reduce reSty">-</a>
-                                                           <input type="text" value="1" class="sum">
-                                                           <a href="javascript:;" class="plus">+</a>
-                                                       </div>
-                                                   </li>
-                                                   <li class="list_op ">
-                                                       <span class="del"><a href="javascript:;" class="delBtn">移除商品</a></span>
-                                                   </li>
-                                                   <li class="list_sum ">
-                                                      <span class="sum_price">￥980</span>
-                                                   </li>
-                                               </ul>
+                                                <p>Sub Total <span>$296.00</span></p>
+                                                <p>Shipping Fee <span>$00.00</span></p>
 
-                                           <p>Sub Total <span>$296.00</span></p>
-                                           <p>Shipping Fee <span>$00.00</span></p>
+                                                <h4>Grand Total <span>$296.00</span></h4>
 
-                                           <h4>Grand Total <span>$296.00</span></h4>
+                                            </div>
 
-                                       </div>
+                                            <div class="container order_content">
+                                                <!-- 商品列表 -->
+                                                <p>Sub Total <span>$296.00</span></p>
+                                                <p>Shipping Fee <span>$00.00</span></p>
 
-                                   </div>
+                                                <h4>Grand Total <span>$296.00</span></h4>
 
-                                   <!-- Payment Method -->
-                                   <div class="col-12">
+                                            </div>
 
-                                       <h4 class="checkout-title">Payment Method</h4>
+                                        </div>
 
-                                       <div class="checkout-payment-method">
+                                        <!-- Payment Method -->
+                                        <div class="col-12">
 
-                                           <div class="single-method">
-                                               <input type="radio" id="payment_check" name="payment-method" value="check">
-                                               <label for="payment_check">Check Payment</label>
-                                               <p data-method="check">Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
-                                           </div>
+                                            <h4 class="checkout-title">Payment Method</h4>
 
-                                           <div class="single-method">
-                                               <input type="radio" id="payment_bank" name="payment-method" value="bank">
-                                               <label for="payment_bank">Direct Bank Transfer</label>
-                                               <p data-method="bank">Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
-                                           </div>
+                                            <div class="checkout-payment-method">
 
-                                           <div class="single-method">
-                                               <input type="radio" id="payment_cash" name="payment-method" value="cash">
-                                               <label for="payment_cash">Cash on Delivery</label>
-                                               <p data-method="cash">Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
-                                           </div>
+                                                <div class="single-method">
+                                                    <input type="radio" id="payment_check" name="payment-method"
+                                                           value="check">
+                                                    <label for="payment_check">Check Payment</label>
+                                                    <p data-method="check">Please send a Check to Store name with Store
+                                                        Street, Store Town, Store State, Store Postcode, Store
+                                                        Country.</p>
+                                                </div>
 
-                                           <div class="single-method">
-                                               <input type="radio" id="payment_paypal" name="payment-method" value="paypal">
-                                               <label for="payment_paypal">Paypal</label>
-                                               <p data-method="paypal">Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
-                                           </div>
+                                                <div class="single-method">
+                                                    <input type="radio" id="payment_bank" name="payment-method"
+                                                           value="bank">
+                                                    <label for="payment_bank">Direct Bank Transfer</label>
+                                                    <p data-method="bank">Please send a Check to Store name with Store
+                                                        Street, Store Town, Store State, Store Postcode, Store
+                                                        Country.</p>
+                                                </div>
 
-                                           <div class="single-method">
-                                               <input type="radio" id="payment_payoneer" name="payment-method" value="payoneer">
-                                               <label for="payment_payoneer">Payoneer</label>
-                                               <p data-method="payoneer">Please send a Check to Store name with Store Street, Store Town, Store State, Store Postcode, Store Country.</p>
-                                           </div>
+                                                <div class="single-method">
+                                                    <input type="radio" id="payment_cash" name="payment-method"
+                                                           value="cash">
+                                                    <label for="payment_cash">Cash on Delivery</label>
+                                                    <p data-method="cash">Please send a Check to Store name with Store
+                                                        Street, Store Town, Store State, Store Postcode, Store
+                                                        Country.</p>
+                                                </div>
 
-                                           <div class="single-method">
-                                               <input type="checkbox" id="accept_terms">
-                                               <label for="accept_terms">I’ve read and accept the terms & conditions</label>
-                                           </div>
+                                                <div class="single-method">
+                                                    <input type="radio" id="payment_paypal" name="payment-method"
+                                                           value="paypal">
+                                                    <label for="payment_paypal">Paypal</label>
+                                                    <p data-method="paypal">Please send a Check to Store name with Store
+                                                        Street, Store Town, Store State, Store Postcode, Store
+                                                        Country.</p>
+                                                </div>
 
-                                       </div>
+                                                <div class="single-method">
+                                                    <input type="radio" id="payment_payoneer" name="payment-method"
+                                                           value="payoneer">
+                                                    <label for="payment_payoneer">Payoneer</label>
+                                                    <p data-method="payoneer">Please send a Check to Store name with
+                                                        Store Street, Store Town, Store State, Store Postcode, Store
+                                                        Country.</p>
+                                                </div>
 
-                                       <button class="place-order df-btn">Place order</button>
+                                                <div class="single-method">
+                                                    <input type="checkbox" id="accept_terms">
+                                                    <label for="accept_terms">I’ve read and accept the terms &
+                                                        conditions</label>
+                                                </div>
 
-                                   </div>
+                                            </div>
 
-                               </div>
-                           </div>
-                           </div>
-                       </div>
-                    </form> 
+                                            <button class="place-order df-btn">Place order</button>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                     <!-- Checkout Form End-->
                 </div>
             </div>
         </div>
     </div>
     <!--Checkout Area End-->
-    
+
     <!--Projects section start-->
     <div class="newslatter-section newslatter-section-tow section pt-5 pt-lg-0 pt-sm-0 pt-xs-50 pb-xs-50">
         <div class="container">
-           
+
             <div class="row">
-               <div class="col-12">
-                   <!--News Latter Area Start-->
-                   <div class="news-latter-area newslatter-black">
-                       <div class="news-latter-box">
-                           <h3>SUBSCRIBE OUR NEWSLETTER, GET ALL <br> LATEST NEWS, UPDATE, VIDEOS AND OFFERS </h3>
-                           <form action="#">
-                               <input type="text" placeholder="Enter your email here">
-                           </form>
-                       </div>
-                   </div>
-                   <!--News Latter Area End-->
-               </div> 
+                <div class="col-12">
+                    <!--News Latter Area Start-->
+                    <div class="news-latter-area newslatter-black">
+                        <div class="news-latter-box">
+                            <h3>SUBSCRIBE OUR NEWSLETTER, GET ALL <br> LATEST NEWS, UPDATE, VIDEOS AND OFFERS </h3>
+                            <form action="#">
+                                <input type="text" placeholder="Enter your email here">
+                            </form>
+                        </div>
+                    </div>
+                    <!--News Latter Area End-->
+                </div>
             </div>
-            
+
         </div>
-        
+
     </div>
     <!--Projects section end-->
-    
+
     <!--Footer section start-->
     <div id="footer"></div>
-     <!--Footer section end-->
-    
+    <!--Footer section end-->
+
 </div>
 
 <!-- Placed js at the end of the document so the pages load faster -->
 
 <!-- All jquery file included here -->
-<script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/plugins.js"></script>

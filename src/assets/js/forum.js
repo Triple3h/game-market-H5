@@ -3,7 +3,9 @@ $(function () {
 
     let s = cutUrl("page");
 
-    let gameId = cutUrl("gameId");
+    // let gameId = cutUrl("gameId");
+
+    let gameId =2;
 
     let $page = $(".page-pagination li a");
 

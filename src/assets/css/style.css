@@ -158,7 +158,7 @@ img {
   .note-editable {
     height: 200px !important; } }
 
-/*-- 
+/*--
     - Common Classes
 -----------------------------------------*/
 .fix {
@@ -260,7 +260,7 @@ img {
 .mbYTP_wrapper {
   z-index: -9 !important; }
 
-/*-- 
+/*--
     - Input Placeholder
 -----------------------------------------*/
 input:-moz-placeholder, textarea:-moz-placeholder {
@@ -297,7 +297,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 .bg-black {
   background-color: #081b1f !important; }
 
-/*-- 
+/*--
     - Tab Content & Pane Fix
 ------------------------------------------*/
 .tab-content {
@@ -315,10 +315,10 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
       opacity: 1;
       overflow: visible; }
 
-/*-- 
+/*--
     - Main Wrapper
 ------------------------------------------*/
-/*-- 
+/*--
     - Section Title
 ------------------------------------------*/
 .section-title {
@@ -388,7 +388,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
       margin-left: auto;
       margin-right: 0; }
 
-/*-- 
+/*--
     - Button
 ------------------------------------------*/
 .df-btn {
@@ -961,7 +961,7 @@ header.header.header-static {
 .logo a {
   display: inline-block; }
   .logo a img {
-    max-width: 100%; }
+    max-width: 65%; }
 
 /*-- Header Search --*/
 .header-right-wrap ul {
@@ -1111,7 +1111,7 @@ header.header.header-static {
     .main-menu > ul > li:last-child {
       margin-right: 0; }
     .main-menu > ul > li > a {
-      font-size: 20px;
+      font-size: 25px;
       line-height: 70px;
       font-weight: 400;
       letter-spacing: 0.25px;
@@ -1185,7 +1185,7 @@ header.header.header-static {
       font-family: "Qanto";
       color: #151515;
       display: block;
-      font-size: 14px;
+      font-size: 18px;
       line-height: 30px;
       font-weight: 400;
       padding: 0 20px; }
@@ -1484,7 +1484,7 @@ header.header.header-static {
 
 /*-- Hero Item --*/
 .hero-item {
-  width: 100%;
+  width: 1920px;
   height: 1075px;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1501,7 +1501,7 @@ header.header.header-static {
   background-position: center center;
   z-index: 1; }
   .hero-item.hero-item-2 {
-    height: 860px; }
+    height: 1080px; }
     @media only screen and (min-width: 1200px) and (max-width: 1499px) {
       .hero-item.hero-item-2 {
         height: 600px; } }
@@ -2236,9 +2236,7 @@ header.header.header-static {
 
 .single-featured {
   position: relative;
-  overflow: hidden;
-
-}
+  overflow: hidden; }
   .single-featured a {
     display: block; }
     .single-featured a img {
@@ -2269,7 +2267,7 @@ header.header.header-static {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; } }
   .video-wrapper .single-video-title {
-    background-image: url(../images/video/video-bg.jpg);
+    background-image: url("../images/video/video-bg.jpg"/*tpa=https://www.17sucai.com/preview/1528155/2018-12-26/Gilbard/assets/images/video/video-bg.jpg*/);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2768,7 +2766,7 @@ header.header.header-static {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  background-image: url(../images/bg/news-bg.jpg);
+  background-image: url("../images/bg/news-bg.jpg"/*tpa=https://www.17sucai.com/preview/1528155/2018-12-26/Gilbard/assets/images/bg/news-bg.jpg*/);
   background-position: right;
   background-repeat: no-repeat;
   -webkit-box-align: center;
@@ -2778,7 +2776,7 @@ header.header.header-static {
   box-shadow: 0px 10px 30px 10px rgba(0, 0, 0, 0.05); }
   .news-latter-area.newslatter-black {
     background-color: #081b1f;
-    background-image: url(../images/bg/news-bg-2.png); }
+    background-image: url("../images/bg/news-bg-2.png"/*tpa=https://www.17sucai.com/preview/1528155/2018-12-26/Gilbard/assets/images/bg/news-bg-2.png*/); }
     @media only screen and (max-width: 767px) {
       .news-latter-area.newslatter-black {
         background-image: none; } }
@@ -2873,7 +2871,7 @@ header.header.header-static {
   text-align: center; }
   .testimonial .testimonial-inner::before {
     display: block;
-    content: url(../images/icons/quote-left.png);
+    content: url("../images/icons/quote-left.png"/*tpa=https://www.17sucai.com/preview/1528155/2018-12-26/Gilbard/assets/images/icons/quote-left.png*/);
     opacity: 1;
     line-height: 1;
     margin-bottom: 20px; }
@@ -3109,7 +3107,7 @@ header.header.header-static {
         max-width: 100%; } }
 
 .upcoming-game-area {
-  background-image: url(../images/banner/game-banner.jpg);
+  background-image: url("../images/banner/game-banner.jpg"/*tpa=https://www.17sucai.com/preview/1528155/2018-12-26/Gilbard/assets/images/banner/game-banner.jpg*/);
   background-position: center center;
   background-size: cover;
   position: relative;
@@ -3582,7 +3580,7 @@ header.header.header-static {
         font-size: 16px; } }
     .single-games-review .review-content h4 a {
       display: block;
-      width: 200px;
+      width: 230px;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -4693,7 +4691,7 @@ header.header.header-static {
   padding: 45px; }
   @media only screen and (max-width: 575px) {
     .checkout-cart-total {
-      padding: 10px; } }
+      padding: 30px; } }
   .checkout-cart-total h4 {
     -ms-flex-preferred-size: 18px;
     flex-basis: 18px;
@@ -4717,16 +4715,16 @@ header.header.header-static {
       line-height: 23px;
       font-weight: 600;
       display: block;
-      }
+      margin-bottom: 16px; }
       .checkout-cart-total ul li span {
         color: #ffffff;
-       }
+        float: right; }
   .checkout-cart-total p {
     font-size: 14px;
     line-height: 30px;
     font-weight: 600;
     color: #ffffff;
-    padding: 30px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #ffffff;
     margin: 0; }
     .checkout-cart-total p span {
@@ -5383,7 +5381,11 @@ header.header.header-static {
   width: 360px;
 
 }
-
+.order_lists .list_con .list_img{
+  width: 200px;
+  height: 200px;
+  float: left;
+}
 .order_lists .list_con .list_img img{
   width: 100%;
   vertical-align: top;
@@ -5438,7 +5440,7 @@ header.header.header-static {
   width: 77px;
   height: 30px;
   position: relative;
- margin-top: 20px;
+  margin-top: 20px;
 }
 .order_lists .list_amount .amount_box input{
   width: 39px;

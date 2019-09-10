@@ -89,10 +89,10 @@ function offPager(URL, $target) {
 
 function getReview(review, $target) {
 
-    let $star = $("<div>").attr("class","ratting");
+    let $star = $("<div>").attr("class", "ratting");
 
-    for(let i = 0;i<review.reviewScore;i++){
-        $("<i>").attr("class","fa").addClass("fa-star").appendTo($star)
+    for (let i = 0; i < review.reviewScore; i++) {
+        $("<i>").attr("class", "fa").addClass("fa-star").appendTo($star)
     }
 
     $("<div>").append(
@@ -101,40 +101,74 @@ function getReview(review, $target) {
         $("<p>").text(review.reviewContent)
     ).append(
         $("<div>").append(
-            $("<a>").attr("href","#")
+            $("<a>").attr("href", "#")
                 .text(review.user.userName)
-        ).attr("class","review-name-action")
-    ).attr("class","single-review")
+        ).attr("class", "review-name-action")
+    ).attr("class", "single-review")
         .addClass("mb-30")
-        .appendTo($target)
+        .insertAfter($target)
 }
 
-// <div class="single-review mb-30">
-//     <h4>Best action game play ever</h4>
-//         <div class="ratting">
-//             <i class="fa fa-star"></i>
-//             <i class="fa fa-star"></i>
-//             <i class="fa fa-star"></i>
-//             <i class="fa fa-star"></i>
-//             <i class="fa fa-star-half-o"></i>
-//         </div>
-//     <p>The Witcher 3 is the best action game that i play ever. encounter consequences
-//     that are mely painful. Nor again is there me anyone who loves or pursues or
-//     desires take a trivial meaning less sexample, which of us ever undertakes
-//     laborious physical exercise.</p>
-//     <div class="review-name-action">
-//         <a href="#">Adam Smith</a>
-//     </div>
-// </div>
+function getCarts(URL, $target) {
 
-// <div class="col-lg-4 col-md-6">
-//     <div class="single-game mb-50">
-//         <div class="game-img">
-//             <a href="games-details.html"><img src="assets/images/game/game1.jpg" alt=""></a>
-//         </div>
-//         <div class="game-content">
-//             <h4><a href="games-details.html">the elder scroll</a></h4>
-//             <span>pc/xbox/ps4</span>
-//         </div>
-//     </div>
-// </div>
+    $.get(URL, function (results) {
+        if (results.status === 200) {
+            for (let result of results.data) {
+                $("<ul>").append(
+                    $("<li>").attr("class", "list_con")
+                        .append(
+                            $("<div>").attr("class", "list_text")
+                                .append(
+                                    $("<a>").attr("href", "javascript:;")
+                                        .text(result.game.gameName)
+                                )
+                        )
+                ).append(
+                    $("<li>").attr("class", "list_price")
+                        .append(
+                            $("<span>").attr("class", "price")
+                                .text("￥" + result.game.price * result.game.discount)
+                        )
+                ).append(
+                    $("<li>").attr("class", "list_amount")
+                        .append(
+                            $("<div>").attr("class", "amount_box")
+                                .append(
+                                    $("<a>").attr("href", "javascript:;")
+                                        .attr("class", "reduce")
+                                        .addClass("reSty")
+                                        .text("-")
+                                ).append(
+                                $("<input>").attr("type", "text")
+                                    .attr("value", result.number)
+                                    .attr("class", "sum")
+                            ).append(
+                                $("<a>").attr("href", "javascript:;")
+                                    .attr("class", "plus")
+                                    .text("+")
+                            )
+                        )
+                ).append(
+                    $("<li>").attr("class", "list_op")
+                        .append(
+                            $("<span>").attr("class", "del")
+                                .append(
+                                    $("<a>").attr("href", "javascript:;")
+                                        .attr("class", "delBtn")
+                                        .text("移除商品")
+                                )
+                        )
+                ).append(
+                    $("<li>").attr("class", "list_sum")
+                        .append(
+                            $("<span>").attr("class", "sum_price")
+                                .text("￥" + result.game.price * result.game.discount * result.number)
+                        )
+                ).attr("class", "order_lists")
+                    .addClass("col-lg-12")
+                    .prependTo($target)
+            }
+        }
+    },'json')
+
+}
